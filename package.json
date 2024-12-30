@@ -2,11 +2,8 @@
   "name": "firebase-functions",
   "private": true,
   "type": "module",
-  "engines": {
-    "node": "18"
-  },
   "scripts": {
-    "serve": "firebase emulators:start --only functions",
+    "serve": "firebase emulators:start --inspect-functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
