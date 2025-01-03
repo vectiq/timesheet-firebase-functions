@@ -8,11 +8,10 @@ const sendGridApiKey = defineSecret('SENDGRID_API_KEY');
 
 exports.sendEmail = functions.https.onCall({secrets: [sendGridApiKey]},async (request) => {
     // Check if the user is authenticated
-    if (!request.auth) {
-        throw new functions.https.HttpsError('unauthenticated', 'Emails must be triggerd by an authenticated session.');
-    }
+    // if (!request.auth) {
+    //     throw new functions.https.HttpsError('unauthenticated', 'Emails must be triggerd by an authenticated session.');
+    // }
 
-    console.log('SendGrid API Key:', sendGridApiKey.value());
     sgMail.setApiKey(sendGridApiKey.value());
 
     const { recipient, subject, body, type } = request.data;

@@ -1,6 +1,6 @@
 const { createUser } = require('./CreateNewUser');
 const { sendEmail } = require('./SendEmail');
-const { approveTimesheet } = require('./timesheetApproval');
+const { approveTimesheet } = require('./TimesheetApproval');
 
 exports.createUser = createUser;
 exports.sendEmail = sendEmail;
